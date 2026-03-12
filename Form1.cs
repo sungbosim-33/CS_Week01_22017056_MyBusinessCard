@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Collections; // 1. 이게 있어야 리소스를 뒤질 수 있어요!
+using System.Collections; // 
 
 namespace MyBusinessCard
 {
@@ -15,11 +15,9 @@ namespace MyBusinessCard
         public Form1()
         {
             InitializeComponent();
-            // 2. 프로그램이 켜질 때 리소스에서 사진을 가져오라고 시킵니다.
             LoadImagesFromResources();
         }
 
-        // 3. 리소스에서 이미지만 쏙쏙 골라 장바구니에 담는 함수입니다.
         private void LoadImagesFromResources()
         {
             var resourceSet = Properties.Resources.ResourceManager.GetResourceSet(System.Globalization.CultureInfo.CurrentCulture, true, true);
